@@ -37,3 +37,12 @@ dict['one'] = 11
 del(dict['one'])
 dict.pop('two')
 
+## 리스트와 비교
+공통점
+![image](https://user-images.githubusercontent.com/44639709/111310732-c3a21200-86a0-11eb-9040-34959b61a24d.png)
+
+차이점
+![image](https://user-images.githubusercontent.com/44639709/111310798-d3215b00-86a0-11eb-980a-bd4b999e97c8.png)
+
+ex > list[idx] => pop 할 경우 값이 달라질 수 있으나 dict['key'] 의 경우, key 를 기준으로 사용하므로 달라지지 않는다.
+ex > dict1.update(dict2) 를 할 경우, dict1 과 중복되는건 dict2 로 엎어지고 추가한다.
