@@ -48,3 +48,20 @@ dict.pop('two')
 <br/>
 ex > list[idx] => pop 할 경우 값이 달라질 수 있으나 dict['key'] 의 경우, key 를 기준으로 사용하므로 달라지지 않는다.<br/>
 ex > dict1.update(dict2) 를 할 경우, dict1 과 중복되는건 dict2 로 엎어지고 추가한다.
+
+## 튜플
+- 한번 정해진 순서를 바꿀 수 없다.
+튜플 선언
+
+<pre>
+<code>
+tuple1 = (1, 2, 3, 4)
+
+tuple2 = 1, 2, 3, 4
+
+mylist = [1,2,3,4]
+tuple3 = tuple(mylist)
+</code>
+</pre>
+
+- 튜플은 값의 변경과 삭제가 불가능
