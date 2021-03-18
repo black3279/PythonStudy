@@ -84,3 +84,26 @@ f = d, e    # 변수 d와 e를 f에 패킹
     ex> x,y = y,x
 2) 함수의 리턴 값으로 여러 값을 전달할 수 있다.
     ex> return 1,2,3,4...
+    
+## 튜플을 이용한 함수의 리턴값
+- 튜플 리스트 활용
+<pre>
+<code>
+for a in enumerate(list):
+    print('{}번째 값: {}'.format(a[0], a[1]))
+
+for a in enumerate(list):
+    print('{}번째 값: {}'.format(*a))
+</code>
+</pre>
+
+- 튜플 딕셔너리 활용
+<pre>
+<code>
+for a in dict.items():
+    print('{}의 나이는:{}'.format(a[0], a[1]))
+
+for a in dict.items():
+    print('{}의 나이는:{}'.format(*a))
+</code>
+</pre>
