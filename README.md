@@ -116,3 +116,62 @@ while selected not in ['가위', '바위', '보']:
 </code>
 </pre>
 for 반복문으로 작성한 코드는 while 반복문으로 작성 할 수 있다.
+
+## try except 문
+
+Index Error 처리의 경우, if index < len(list) else 형태로 구현 가능하다.
+반면에, ImportError 와 같은 경우에는 try except 로만 가능하다
+<pre>
+<code>
+except Exception as ex :
+    print(ex)
+</code>
+</pre>
+와 같은 형태로 발생한 예외의 종류를 알수있다.
+
+raise Exception #(예외종류) 를 통해 예외를 발생시킬 수 있는데,
+for문이 여러개일때 한번에 탈출하기위해 break 대신 raise StopIteration(Exception) 을 활용할 수도 있다.
+
+- 단락평가란 파이썬에서 and or 연산도중 실행할 필요가 없으면 더이상 True False 연산을 진행하지않는 것을 말한다.
+
+Bool(0) : Bool 함수는 0인 경우 False 를 나머지 숫지는 모두 True 를 리턴한다.
+빈 딕셔너리나 리스트는 False 그 외에는 True 를 리턴한다.
+None(아무 값 없음) 도 False 이며 빈문자열은 False 를 그 외 문자열은 모두 True 를 리턴한다.
+이는 if 문에서 해당 문자열의 True False판단에도 적용된다.
+
+value = input('입력주세요 > ') or 'No input'
+
+으로도 단락평가를 이용할수있다
+
+## List의 기능
+
+list.index( value ) : 값을 이용하여 위치를 찾는 기능
+list.extend( [value1, value2] ) : 리스트 뒤에 값을 추가, 더하기 연산으로도 가능
+list.insert( index, value ) : 원하는 위치에 값을 추가, - 는뒤부터 계산
+인덱스 범위보다 클경우 마지막에 넣는다
+list.sort( ) : 값을 순서대로 정렬
+list.reverse( ) : 값을 역순으로 정렬
+
+## List와 String
+리스트와 문자열은 유사하다.
+문자열도 배열 인덱스로 가져오거나 in 연산으로 포함여부 알수있고 위 리스트 기능도 사용가능하다
+서로 변환이 가능하다.
+list("str") 시 문자단위로 저장한다
+list = str.split( ) : 문자열에서 리스트로 각 단어단위로 저장한다
+혹은 split 함수인자로 구분자를 준다
+" ".join( list ) : 리스트에서 문자열으로 만든다
+
+## Slice
+- 리스트나 문자열에서 값을 여러개 가져오는 기능
+
+slice를 하면 해당하는 부분의 리스트나 문자열을 새로 만들어 준다.
+시작과 끝부분을 얻어 오는 방법
+
+list[ 2: ] : 2번째부터 끝까지 반환
+list[ : 2 ] : 처음부터 2번째 까지 반환 (end inx 전까지 )
+list[ : ] : 처음부터 끝까지 전부 반환
+
+## step
+slice한 값의 범위에서 step 값을 주어 그 값만큼 건너뛰어 가져오는 기능
+list[ 시작값:끝값:step ]
+큰값에서 작은값으로 step을 음수로 줄수도있다
