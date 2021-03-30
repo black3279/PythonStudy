@@ -175,3 +175,23 @@ list[ : ] : 처음부터 끝까지 전부 반환
 slice한 값의 범위에서 step 값을 주어 그 값만큼 건너뛰어 가져오는 기능
 list[ 시작값:끝값:step ]
 큰값에서 작은값으로 step을 음수로 줄수도있다
+
+## 자료형
+type( a ) # type( 변수명 ) : 자료형
+isinstance( 42, int ) # isinstance( 값, 자료형 ) : 자료형 검사
+
+## 클래스 선언
+<pre>
+<code>
+class Human( ):
+    '''사람'''
+</code>
+</pre>
+
+## 인스턴스 생성
+<pre>
+<code>
+person1 = Human( )
+person2 = Human( )
+</code>
+</pre>
